@@ -1,0 +1,20 @@
+<%- include('header') %>
+
+<h1>
+  <%= article.title %>
+  <a href="/<%= article.id %>/delete" class="btn btn-outline-danger float-end ms-2">Delete</a>
+  <a href="/<%= article.id %>/update" class='btn btn-outline-secondary float-end'>Edit</a>
+</h1>
+<p>
+  <strong>Date:</strong>
+  <%= article.updatedAt.toLocaleString("en-US", 
+   { month: 'long', day: 'numeric', year: 'numeric' }); %>
+</p>
+
+<hr class='mt-2'>
+
+<div style="white-space: pre-line">
+  <%= article.content %>
+</div>
+
+<%- include('footer') %>

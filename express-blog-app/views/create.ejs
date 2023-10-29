@@ -1,0 +1,19 @@
+<%- include('header') %>
+
+<h1>Create Article</h1>
+<hr>
+
+<form method="POST" action="">
+  <div class="mb-3">
+    <label for="title" class="form-label">Title</label>
+    <input type="text" id="title" name="title" class="form-control" maxlength="200" required>
+  </div>
+  <div class="mb-3">
+    <label for="content" class="form-label">Content</label>
+    <textarea id="content" name="content" rows="10" class="form-control" required></textarea>
+  </div>
+
+  <button type="submit" class="btn btn-secondary mt-3">Submit</button>
+</form>
+
+<%- include('footer') %>
